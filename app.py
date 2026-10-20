@@ -11,14 +11,16 @@ BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = BASE_DIR / "data" / "crop_data.csv"
 MODEL_PATH = BASE_DIR / "model_weights.npz"
 
+
 FEATURE_COLUMNS = [
-    "rainfall",
-    "temperature",
-    "ph",
-    "humidity",
-    "npk",
+    "Rainfall_mm",
+    "Temperature_C",
+    "Soil_pH",
+    "Humidity_pct",
+    "Fertilizer_Used_kg",
 ]
-TARGET_COLUMN = "yield"
+TARGET_COLUMN = "Yield_ton_per_ha"
+
 TARGET_IS_TONS_PER_HECTARE = True
 TEST_SIZE = 0.2
 RANDOM_STATE = 42
